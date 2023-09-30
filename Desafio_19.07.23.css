@@ -1,0 +1,80 @@
+body{
+    background-color:#fafafa;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 32px;
+}
+
+h1{
+    font-weight: 400;
+    text-align: center;
+    padding: 16px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px black;
+}
+
+.cards_container{   
+    display: flex;
+    justify-content: space-evenly;
+    gap: 32px;
+    text-align: center;
+    align-items:stretch; /* Add this line to stretch cards to the same height */
+}
+
+.card{
+    box-sizing: border-box;
+    width: calc(20% - 32px); /* Largura fixa para todos os cards (20% - 32px de espaçamento entre eles) */
+    background-color: transparent; /* Remove the background-color from the card class */
+    color: #fafafa;
+    display: flex;
+    flex-direction: column; /* Adicione esta linha para que o conteúdo dentro do card se alinhe verticalmente */
+    flex: 1; /* carcaterística do Projeto Aprenser */
+}
+
+.card img {
+    display: block;
+    max-height: 80%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Para garantir que o conteúdo ocupe toda a altura disponível */
+    background-color: #690909; /* Add the background-color to the card_content class */
+
+    border-top: transparent;
+    padding: 1rem 1.125rem;
+    border-radius: 0 0 8px 8px;
+
+}
+
+.card_content h2 {
+    font-size: 18px;
+    color: #e4dede;
+    text-align: center;
+    padding: 10px 10px; /* Adicione este padding igual para os elementos h2 e p */
+    text-shadow: 1px 1px 1px black;
+    font-weight: bold;
+
+}
+
+.card_content p {
+    flex: 1; /* Para que os parágrafos ocupem o espaço disponível verticalmente */
+    font-size: 14px;
+    color: #e4dede;
+    margin: 0; /* 0 para remover o espaçamento vertical */
+    line-height: 1.5;
+    text-align: justify;
+    padding: 10px 10px; /* Adicione este padding igual para os elementos h2 e p */
+
+}
+
+@media (max-width: 800px){
+    .cards_container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,56 @@
+body{
+    background-color:#fafafa;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 32px;
+     /* min-height: 100vh; Isso garante que o body tenha pelo menos a altura da janela de visualização */
+}
+
+h1{
+    font-weight: 400;
+    text-align: center;
+    padding: 16px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+.cards_container{   
+    display: flex;
+    justify-content:space-evenly;
+    gap:32px;
+    text-align: center;
+}
+
+
+.card{ /*as divs .card terão alturas iguais, adequando-se ao conteúdo presente em cada uma*/
+    box-sizing: border-box;
+    height: fit-content; /* Ajuste da altura para se adequar ao conteúdo */
+    width: fit-content; /* Ajuste da largura para se adequar ao conteúdo */
+    background-color: #690909;
+    color:#fafafa;
+}
+
+
+.card p{
+    font-size: 18px;
+    color:#e4dede;
+    margin: 5px 0;
+    line-height: 1.5;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+.tamanho{
+    display: block;
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+@media (max-width: 800px){
+    .cards_container{flex-direction: column;
+    align-items: center;}
+}
+
+
